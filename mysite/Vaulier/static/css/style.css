@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Raleway|Muli|Kanit');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#inicio{
+    background: #8a3952;
+    height: 75px;
+}
+
+.logo{
+    padding-top: 6px;
+    padding-bottom: 10px;
+}
+
+/* --------------------------------------------------------------------------- BARRA DE TITULO:  catalogo */
+#seccion{
+    background: #6a2d40;
+    height: 90px;
+    padding-top: 25px;
+}
+
+.texto{
+    padding-bottom: 30px;
+    border: 1px solid #ba5d7a; /*anchura, estilo y color borde*/
+    padding: 10px; /*espacio alrededor texto*/
+    background-color: #ba5d7a; /*color botón*/
+    color: #ffffff; /*color texto*/
+    text-decoration: none; /*decoración texto*/
+    text-transform: uppercase; /*capitalización texto*/
+    font-family: 'Helvetica', sans-serif; /*tipografía texto*/
+    text-align: center;
+}
+
+nav {
+    width: 50%;
+    padding-top: 30px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.8em;
+    font-weight: bold;
+    float: right;
+}
+
+nav a{
+    display: inline-block;
+    color: #FFF;
+    text-decoration: none;
+    text-align: center;
+    width: 100px;
+}
+
+nav a:hover{ 
+    background-color: #ba5d7a;
+    border-bottom: solid 3px #ba5d7a;
+}
+
+#medio, #fin{
+    background: #6a2d40;
+    padding-top: 70px;
+}
+
+.logo-inicio{
+    padding-top: 68px;
+    width: 70%;
+}
+
+#fin{
+    background: #8a3952;
+    height: 100px;
+    padding-top: 40px;
+    padding-bottom: 10px;
+
+}
+
+
+
+.info{
+    font-family: "Kanit", sans-serif;
+    font-size: 0.9em;
+    color: #FFF;
+    font-weight: bold;
+}
+
+.social{
+    /*padding-left: 900px;*/
+    padding-top: 15px;
+}
+
+.icon-facebook, .icon-google-plus, .icon-instagram, .icon-envelop{
+    margin-right: 10px;
+    
+}
+
+.social a{
+    color:  #ba5d7a;
+    background-color:  #FFF;
+    text-decoration: none;
+    font-size: 1.5em;
+    border-radius: 50%;
+    padding: 0.4em;
+}
+
+.social a:hover{
+    background-color: #e698b0;
+    color: #FFF;
+}
+
+#cont{
+    padding-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+    background: #FFF;
+}
+
+.cover{ 
+    background: #FFF; 
+    /*padding-top: 150px;
+    padding-bottom: 30px;*/
+    size: 7em;
+    text-align: left;
+    border: 1px solid #999999;
+}
+
+ /* --------------------------------- MUESTRA DE SPOTIFY, BOTON DE COMPRAR, TEXTO TRACKLIST */
+#tracklist-album{
+    text-align: right;
+    padding-right: 10px;
+    padding-left: 10px;
+
+}
+
+#album{
+    *border: 1px solid #999999;
+    text-align: left;
+    /*
+    padding-top: 150px;
+    padding-bottom: 20px; */
+    font-size: 1.3em;
+    color: #000000;
+    font-weight: bold; 
+    padding-left: 10px;
+    padding-bottom: 150px;
+}
+
+.titulo{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5em;
+    color: #000000;
+    font-weight: bold; 
+}
+
+.artista{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1em;
+    color: #000000;
+    font-weight: bold; 
+}
+.valor{
+    font-family: 'Open Sans';
+    font-weight: bold; 
+    padding-bottom: 30px;
+}
+
+.muestra{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1em;
+    color: #000000;
+    font-weight: bold;
+    text-align: center;
+
+}
+
+
+
+
+
+.boton-compra {
+
+    width: 600px;
+    border: 1.2px solid #ba5d7a; /*anchura, estilo y color borde*/
+    padding: 15px; /*espacio alrededor texto*/
+    background-color: #ba5d7a; /*color botón*/
+    color: #ffffff; /*color texto*/
+    text-decoration: none; /*decoración texto*/
+    text-transform: uppercase; /*capitalización texto*/
+    font-family: 'Helvetica', sans-serif; /*tipografía texto*/
+
+    }
+
+
+
+
+#pie{
+        background: #8a3952;
+        height: 60px;
+        padding-top: px;
+        padding-left: 30px;
+        font-family: 'Open Sans', Arial;
+        font-size: 0.5em;
+        color: #000000;
+    }
+
+
+
+    /* -----------------------------------------------------------   formulario*/
+
+
+#formulario{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    text-align: center;
+}
+
+#seccion-formulario{
+    text-align: center;
+}
+
+
+
+#caja-mensaje{
+    padding-bottom: 30px;
+}
+
+#fldset{
+    padding-left: 130px;
+    text-align: center;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+}
+      
+input {
+    float: right;
+    width: 350px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+      
+label {
+    clear: both;
+    float: left;
+    width: 180px;
+}
+      
+button {
+    clear: both;
+    float: left;
+    width: 50px;
+}
+
+textarea {
+    clear: both;
+    float: right;
+    width: 350px;
+    text-align: center;
+    padding-bottom: 30px;
+}
+      
+.error-control {
+    border: 1px solid red;
+}
+      
+label.error {
+    color: red;
+    width: 300px;
+    font-size: 0.8em;
+    margin-top: -5px;
+    margin-bottom: 10px;
+}
+
+
+
+/*      --------- quienes somos -------*/
+.qs{
+    width: 600px;
+    padding-top: 100px;
+    padding-bottom: 100px
+}
+
+.texto2{
+    padding-top: 30px;
+    
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1em;
+    color: #000000;
+    font-weight: bold;
+}
+
+#qs-qs{
+    text-align:left;
+    padding-top: 50px;
+}
+
+.whatsapp {
+    position:fixed;
+    width:60px;
+    height:60px;
+    bottom:40px;
+    right:40px;
+    background-color:#25d366;
+    color:#FFF;
+    border-radius:90px;
+    text-align:center;
+    font-size:30px;
+    z-index:100;
+    }
+      
+.whatsapp-icon {
+    margin-top:15px;
+    }

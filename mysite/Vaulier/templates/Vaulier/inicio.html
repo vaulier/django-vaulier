@@ -1,0 +1,125 @@
+
+{% load static %}
+
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <title>Inicio | Tienda de Vinilos | Venta de vinilos</title>
+    
+        <!-- ----------------------------------------- META CARACTERISTICAS DEL SITIO WEB ----------------------------------------- --> 
+    <meta charset="UTF-8">                                              <!-- codificación de caracteres  -->
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- tipo sitio  -->
+    <meta http-equiv="content-language" content="es"/>                  <!-- idioma  -->
+    <meta name="distribution" content="global"/>                        <!-- indica que su página web está destinada a todos -->
+   	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <!-- ----------------------------------------- VIEWPORT PARA QUE FUNCIONE CORRECTAMENTE FLEXBOX ----------------------------------------- --> 
+    
+    <meta name="keywords" content="vinilos, tienda de vinilos, tienda online, vinilo, tienda de vinilos chile" />   <!-- palabras claves -->
+    <meta name="description" content="La tienda VAULIER está dedicada a la venta de vinilos. Como tienda, nos preocupamos del interes musical del cliente. Siempre enfocados en las calidad de vinilos">          <!-- descripcion -->
+    <meta name="author" content="Vivanco">     <!-- autor -->
+	<meta name="Robots" content="all"/>         <!-- compatibilidad buscadores -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">      <!-- Browser compatibles-->
+	
+
+    <!-- ----------------------------------------- LINK ARCHIVOS O LIBRERIAS IMPORTADAS ----------------------------------------- --> 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/png" href="{% static 'img/icono_v.png' %}" sizes="64x64" />   <!-- icono -->
+    <link rel="stylesheet" href="{% static 'fonts/style.css' %}" />                            <!-- letras e iconos -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />                              <!-- estilo -->
+    <link rel="stylesheet" href="{% static 'css/flexboxgrid.min.css' %}" />                    <!-- flexbox grid -->
+</head>
+
+<body>    
+    <div class="container"> <!-- centrar todo el sitio web -->  
+        <header id="inicio" class="row center-xs"> <!-- encabezado -->        
+            <section class="logo col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                <img src="{% static 'img/log.png' %}" alt="Logo">
+            </section> 
+
+            <nav class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                <div class="row center-xs">
+                    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                        <a href="inicio">Inicio</a>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                        <a href="quienes-somos">Quienes somos</a>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                        <a href="solicitud">Solicitar vinilos</a>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                        <a href="contactanos">Contáctanos</a>
+                    </div>
+                </div>
+            </nav>        
+        </header>
+        
+        <section id="medio" class="row center-xs"> <!-- banner -->
+            <div class="col-xs-12">
+                <img class="logo-inicio" src="{% static 'img/logo.png' %}" alt="Banner tienda">
+            </div>
+        </section>
+
+    <!-- ----------------------------------------- SECCION DE REDES SOCIALES----------------------------------------- --> 
+        <section id="fin" class="row center-xs">
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                <span class="social">
+                    <a href="https://www.facebook.com" class="icon-facebook" target="_blank"></a>
+                    <a href="https://www.google.com" class="icon-google-plus" target="_blank"></a>
+                    <a href="https://www.instagram.com" class="icon-instagram" target="_blank"></a>
+                    <a href="https://www.gmail.com" class="icon-envelop" target="_blank"></a>
+                    
+                </span>
+            </div>
+        </section>
+
+    <!-- ----------------------------------------- NOMBRE DE LA SECCION ----------------------------------------- --> 
+        <section id="seccion" class="row center-xs">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <p class="texto">Catalogo</p>
+            </div>
+        </section>
+
+    <!-- ----------------------------------------- SECCION DE VINILOS----------------------------------------- --> 
+        <section id="cont" class="row">
+            {% for producto in productos %}
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <img class="cover" src="../../static/img/vinilos/{{ producto.imagenProducto }}" alt=""/>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <a href="https://wa.me/56949482579?text=VAULIER%VINILOS" class="whatsapp" target="_blank"> <i class="fa fa-whatsapp whatsapp-icon"></i></a>
+                <section id="album">
+                    <p class="fecha">{{ producto.published_date }}</p>
+                    <p class="titulo">{{ producto.albumProducto}}</p>
+                    <p class="artista">{{ producto.artistaProducto}}</p>
+                    <br></br>
+                    <p class="valor">Precio: {{ producto.precioProducto}}</p>
+
+                    <div class="row center-xs">
+                        <p class="muestra"> Tracklist </p>
+                        <!-- ----------------------------------------- MUESTREO DE SPOTIFY ----------------------------------------- --> 
+                        <iframe src= "https://open.spotify.com/embed/album/{{ producto.codigoProducto }}"" width="625" height="200" frameborder="1" allowtransparency="false" allow="encrypted-media"></iframe>
+                        <section id="tracklist-album">
+                            <br></br>
+                            <button class ="boton-compra" onclick="window.location='https://www.google.com'" href="https://www.google.com">Comprar Vinilo</button>
+                            <br></br>
+                        </section>
+                    </div>             
+                </section>
+            </div>
+
+            {% endfor %}
+        </section>
+        
+
+    <!-- ----------------------------------------- PIE DE PAGINA ----------------------------------------- -->     
+        <footer id="pie" class="row center-xs"> <!-- footer -->
+            <div class="col-xs-12">
+                <p class="texto2">Desarrollo Web y Mobile</p>
+            </div>    
+        </footer>
+    </div>
+ 
+</body>
+</html>
